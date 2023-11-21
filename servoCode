@@ -1,0 +1,228 @@
+#include <Servo.h>
+
+Servo myservo;
+
+int pos = 0;
+int setpos = 40;
+
+void setup() {
+  Serial.begin(9600);
+  myservo.attach(7);
+  Serial.println("What Morse Code are you gonna give Murph's watch?");
+}
+
+//if-else is better than switch-case in arduino
+void loop() {
+  char inputMorse = Serial.read();
+  if (inputMorse == 'a') { inputA(); }
+  else if (inputMorse == 'b') { inputB(); }
+  else if (inputMorse == 'c') { inputC(); }
+  else if (inputMorse == 'd') { inputD(); }
+  else if (inputMorse == 'e') { inputE(); }
+  else if (inputMorse == 'f') { inputF(); }
+  else if (inputMorse == 'g') { inputG(); }
+  else if (inputMorse == 'h') { inputH(); }
+  else if (inputMorse == 'i') { inputI(); }
+  else if (inputMorse == 'j') { inputJ(); }
+  else if (inputMorse == 'k') { inputK(); }
+  else if (inputMorse == 'l') { inputL(); }
+  else if (inputMorse == 'm') { inputM(); }
+  else if (inputMorse == 'n') { inputN(); }
+  else if (inputMorse == 'o') { inputO(); }
+  else if (inputMorse == 'p') { inputP(); }
+  else if (inputMorse == 'q') { inputQ(); }
+  else if (inputMorse == 'r') { inputR(); }
+  else if (inputMorse == 's') { inputS(); }
+  else if (inputMorse == 't') { inputT(); }
+  else if (inputMorse == 'u') { inputU(); }
+  else if (inputMorse == 'v') { inputV(); }
+  else if (inputMorse == 'w') { inputW(); }
+  else if (inputMorse == 'x') { inputX(); }
+  else if (inputMorse == 'y') { inputY(); }
+  else if (inputMorse == 'z') { inputZ(); }
+
+
+  // inputS();
+  // inputT();
+  // inputA();
+  // inputY();
+  // delay(1500);
+}
+
+
+void dotinput() {
+  myservo.write(0);
+  delay(170);
+  myservo.write(setpos);
+  delay(170);
+}
+
+void lineinput() {
+  myservo.write(0);
+  delay(330);
+  myservo.write(setpos);
+  delay(330);
+}
+
+
+//Morse Code
+
+void inputA() {  //A as morse Code
+  dotinput();
+  lineinput();
+}
+
+void inputB() {  //B as morse Code
+  lineinput();
+  dotinput();
+  dotinput();
+  dotinput();
+}
+
+void inputC() {  //C as morse Code
+  lineinput();
+  dotinput();
+  lineinput();
+  dotinput();
+}
+
+void inputD() {  //D as morse Code
+  lineinput();
+  dotinput();
+  dotinput();
+}
+
+void inputE() {  //E as morse Code
+  dotinput();
+}
+
+void inputF() {  //F as morse Code
+  dotinput();
+  dotinput();
+  lineinput();
+  dotinput();
+}
+
+void inputG() {  //G as morse Code
+  lineinput();
+  lineinput();
+  dotinput();
+}
+
+void inputH() {  //H as morse Code
+  dotinput();
+  dotinput();
+  dotinput();
+  dotinput();
+}
+
+void inputI() {  //I as morse Code
+  dotinput();
+  dotinput();
+}
+
+void inputJ() {  //J as morse Code
+  dotinput();
+  lineinput();
+  lineinput();
+  lineinput();
+}
+
+void inputK() {  //K as morse Code
+  lineinput();
+  dotinput();
+  lineinput();
+}
+
+void inputL() {  //L as morse Code
+  dotinput();
+  lineinput();
+  dotinput();
+  dotinput();
+}
+
+void inputM() {  //M as morse Code
+  lineinput();
+  lineinput();
+}
+
+void inputN() {  //N as morse Code
+  lineinput();
+  dotinput();
+}
+
+void inputO() {  //O as morse Code
+  lineinput();
+  lineinput();
+  lineinput();
+}
+
+void inputP() {  //P as morse Code
+  dotinput();
+  lineinput();
+  lineinput();
+  dotinput();
+}
+
+void inputQ() {  //Q as morse Code
+  lineinput();
+  lineinput();
+  dotinput();
+  lineinput();
+}
+
+void inputR() {  //R as morse Code
+  dotinput();
+  lineinput();
+  dotinput();
+}
+
+void inputS() {  //S as morse Code
+  dotinput();
+  dotinput();
+  dotinput();
+}
+
+void inputT() {  //T as morse Code
+  lineinput();
+}
+
+void inputU() {  //U as morse Code
+  dotinput();
+  dotinput();
+  lineinput();
+}
+
+void inputV() {  //V as morse Code
+  dotinput();
+  dotinput();
+  dotinput();
+  lineinput();
+}
+
+void inputW() {  //W as morse Code
+  dotinput();
+  lineinput();
+  lineinput();
+}
+
+void inputX() {  //X as morse Code
+  lineinput();
+  dotinput();
+  dotinput();
+  lineinput();
+}
+
+void inputY() {  //Y as morse Code
+  lineinput();
+  dotinput();
+  lineinput();
+  lineinput();
+}
+
+void inputZ() {  //Z as morse Code
+  lineinput();
+  lineinput();
+  dotinput();
+  dotinput();
+}
